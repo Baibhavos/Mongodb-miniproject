@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week8 mini-project | <%= title %></title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Contents</a></li>
+        <li><a href="/contents/create">New Content</a></li>
+      </ul>
+    </nav>
+
+    <div class="content">
+      <h2>ALL CONTENTS</h2>
+
+      <% if(content.length > 0){ %> <% content.forEach(blog => { %>
+      <a href="/contents/<%= content._id %>">
+        <h3 class="title"><%= content.title %></h3>
+        <p class="snippet"><%= content.snippet %></p>
+      </a>
+      <% }) %> <% }else { %>
+      <p>No content to display</p>
+      <% } %>
+    </div>
+  </body>
+</html>

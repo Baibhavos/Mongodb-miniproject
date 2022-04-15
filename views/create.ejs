@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create New | <%= title %></title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Contents</a></li>
+        <li><a href="/contents/create">New Blog</a></li>
+      </ul>
+    </nav>
+
+    <div class="create-content">
+      <form action="/contents" method="POST">
+        <label for="title">String</label>
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+          required
+        ></textarea>
+        <label for="snippet">True/False</label>
+        <input type="text" id="complete" name="complete" required />
+        <button>Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
